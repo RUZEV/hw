@@ -1,8 +1,8 @@
 import requests
 
 def fetch(url, params):
-    headers: params["headers"]
-    body: params['body']
+    headers = params["headers"]
+    body = params['body']
     if params["method"] == "GET":
         return requests.get(url, headers=headers)
     if params["method"] == 'POST':
