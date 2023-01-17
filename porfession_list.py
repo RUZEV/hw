@@ -17,7 +17,18 @@ professions = fetch("https://api.hh.ru/specializations", {
 })
 # проверка подключения
 # print(professions.status_code)
+id_list = []
+name_list = []
 
 for i in professions.json():
     for id in i['specializations']:
-        print(id['id'])
+        id_list.append(id["id"])
+print(id_list)
+for i in professions.json():
+    for id in i['specializations']:
+        name_list.append(id["name"])
+print(name_list)
+
+diction = dict(zip(name_list, id_list))
+
+print(diction.get(input()))
