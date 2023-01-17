@@ -6,7 +6,7 @@ def fetch(url, params):
     if params["method"] == "GET":
         return requests.get(url, headers=headers)
     if params["method"] == 'POST':
-        return requests.post(url, headers=headers)
+        return requests.post(url, headers=headers, data=body)
 
 professions = fetch("https://api.hh.ru/specializations", {
   "headers": {
@@ -15,6 +15,9 @@ professions = fetch("https://api.hh.ru/specializations", {
   "body": None,
   "method": "GET"
 })
+# проверка подключения
+# print(professions.status_code)
 
-print(professions.status_code)
-print(professions.json())
+for i in professions.json():
+    for id in i['specializations']:
+        print(id['id'])
