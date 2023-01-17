@@ -23,12 +23,12 @@ name_list = []
 for i in professions.json():
     for id in i['specializations']:
         id_list.append(id["id"])
-print(id_list)
+# print(id_list)
 for i in professions.json():
     for id in i['specializations']:
         name_list.append(id["name"])
-print(name_list)
+# print(name_list)
 
 diction = dict(zip(name_list, id_list))
-
-print(diction.get(input()))
+print(diction)
+# print(diction.get(input()))
