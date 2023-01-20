@@ -1,5 +1,12 @@
 import json
-def diction(items):
+
+def diction():
+    fileway = input('Напишите путь до файла, \n')
+    global dictions
+    with open(fileway, 'r', encoding='utf-8') as t:
+        text = t.read()
+        items = json.loads(text)
+        # print(items)
     id_list = []
     name_list = []
     for i in items:
@@ -11,13 +18,11 @@ def diction(items):
             name_list.append(id["name"])
 
     dictions = dict(zip(name_list, id_list))
-    return dictions
+    print(dictions)
 
-with open("profession", 'r', encoding='utf-8') as t:
-    text = t.read()
-    items = json.loads(text)
-    diction(items)
+diction()
 
+print(dictions['Банковское ПО'])
 
 
 
