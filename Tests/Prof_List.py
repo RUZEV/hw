@@ -1,9 +1,9 @@
 import json
 
 def diction():
-    fileway = input('Напишите путь до файла, \n') + '/profession'
+    #fileway = input('Напишите путь до файла: \n') + '/profession'
     global dictions
-    with open(fileway, 'r', encoding='utf-8') as t:
+    with open('profession', 'r', encoding='utf-8') as t:
         text = t.read()
         items = json.loads(text)
     id_list = []
@@ -15,7 +15,7 @@ def diction():
     for i in items:
         for id in i['specializations']:
             name_list.append(id["name"])
-
+    #print(id_list)
     dictions = dict(zip(name_list, id_list))
     print(dictions)
 
