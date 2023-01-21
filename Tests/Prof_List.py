@@ -17,8 +17,13 @@ def diction():
             name_list.append(id["name"])
     #print(id_list)
     dictions = dict(zip(name_list, id_list))
+    print(dictions['Банковское ПО'])
     print(dictions)
+    # return diction
 
+# key1  = 'Банковское ПО'
+# key2 = 'абра-кодабра'
+# print(dictions['Банковское ПО'])
 diction()
 
 
