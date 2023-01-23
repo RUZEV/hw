@@ -1,15 +1,15 @@
 import unittest
-import Prof_List as PR
+import dictionary_for_test as dt
 
 class json_search_test(unittest.TestCase):
     def test_search_found(self):
         '''key should be found, return list should not be empty'''
-        self.assertTrue([]!=json_search(key1, items))
+        self.assertTrue([]!=dt.fetch(dt.key1, dt.items))
 
     def test_search_not_found(self):
         '''key should not be found, should return an empty list'''
-        self.assertTrue([] == json_search(key2, items))
+        self.assertTrue([] == dt.fetch(dt.key2, dt.items))
 
     def test_is_a_dict(self):
         '''Shold return a dict'''
-        self.assertIsInstance(fetch(key1, items), dict)
+        self.assertIsInstance(dt.fetch(dt.key1, dt.items), dict)
