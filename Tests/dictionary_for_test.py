@@ -11,7 +11,6 @@ def fetch(dicionary, key):
         for id in i['specializations']:
             name_list.append(id["name"])
             dictions = dict(zip(name_list, id_list))
-    print(dictions[key])
     print(dictions)
 
 
