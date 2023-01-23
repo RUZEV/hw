@@ -6,13 +6,9 @@ def fetch(dicionary, dictions):
             dictions.append(id["id"])
     print(dictions)
 
-
 with open('profession', 'r', encoding='utf-8') as t:
     text = t.read()
     items = json.loads(text)
-# fetch(items)
 
-key1 = 'Банковское ПО'
-key2 = 'ddddddddd'
 dictor = []
 fetch(items, dictor)
