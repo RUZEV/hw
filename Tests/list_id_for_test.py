@@ -4,7 +4,7 @@ def fetch(dicionary, dictions):
     for i in dicionary:
         for id in i['specializations']:
             dictions.append(id["id"])
-            dictions = [float(i) for i in dictions]
+            # dictions = [float(i) for i in dictions]
     print(dictions)
 
 with open('profession', 'r', encoding='utf-8') as t:
