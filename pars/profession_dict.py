@@ -15,8 +15,7 @@ professions = fetch("https://api.hh.ru/specializations", {
   "body": None,
   "method": "GET"
 })
-# проверка подключения
-# print(professions.status_code)
+
 id_list = []
 name_list = []
 
@@ -30,4 +29,3 @@ for i in professions.json():
 
 diction = dict(zip(name_list, id_list))
 print(diction)
-# print(diction.get(input()))
